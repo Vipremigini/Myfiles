@@ -12,3 +12,13 @@ I am currently building a ChipSat. These satellites are absolutely tiny compared
 The ChipSats I’m building would be smaller than any other mission has ever attempted to be.  They would transmit radio signals from orbit independently of a larger craft. This would be a technology demonstration mission to prove the feasibility of such small spacecrafts designed with cost and efficiency in mind. 
 
 This is a passion project of mine that I have been working on for the last 2 years, going through many iterations and designs. Now I have finished designing the electronic and physical design of the satellite. What’s left is to build the prototype in real life and test it through weather ballon missions. I’m currently in talks with ISRO regarding launching a implementation of this on one of their upcoming missions. I have also coordinated and partnered with a US based student organisation for the test weather balloon mission, once the prototype is ready. 
+## Please provide an itemized budget
+Prototype PCB manufacturing + components + customs. + shipping: 300 
+Balloon + helium + miscellaneous for weather ballon mission = 150
+Tools and materials. 50 
+
+## What will the $ help you achieve?
+Even though the grant might not be sufficient for the entire project, but it certainly will allow me to build a prototype and test it. The grant will be used for fabrication of the PCB, components and building it. The fund will also be used for testing and launching a weather balloon test mission, which will be used to test the performance of the satellite in extreme temperatures, pressure and radiation. 
+
+## What are your plans for future funding?
+I intend to secure funding for this project through grants like this. I look forward to the day when this project or some future version of this will secure official funding and can receive even greater support and research. 
