@@ -1,35 +1,25 @@
-const width = 125;
-const height = 125;
+const width = 30;
+const height = 20;
 
 setDocDimensions(width, height);
 
 
 const finalLines = [];
 
-// create a polyline
-const polyline = [
-  [30, 90],
-  [100, 90],
-  [100, 30],
-  [30, 30],
-  [30, 90]
-];
 
-finalLines.push(polyline);
-
-let t = new bt.Turtle()
-let p = new bt.Turtle()
+const t = new bt.Turtle()
+const p = new bt.Turtle()
 
 function expr(h, w, x, y, tur) {
-tur.setAngle(0)
-  tur.goTo([x,y])
-  tur.forward(w)
-  tur.left(90)
-  tur.forward(h)
-  tur.left(90)
-  tur.forward(w)
-  tur.left(90)
-  tur.forward(h)
+  p.setAngle(0)
+  p.jump([x,y])
+  p.forward(w)
+  p.left(90)
+  p.forward(h)
+  p.left(90)
+  p.forward(w)
+  p.left(90)
+  p.forward(h)
   
 }
 
@@ -43,8 +33,25 @@ for (let i = 0; i < 625; i++) {
   t.forward(0.1)
   t.right(90)
 }
-expr(20,20,0,0,p)
-expr(20,20,97,105,p)
+expr(3.302,3.048,1.143,0.762,p)
+expr(3.3,1.2,6.096,0.635,p)
+expr(3.3,1.2,10.161,0.635,p)
+expr(3.3,1.2,8.128,0.635,p)
+expr(3.3,1.2,12.065,0.635,p)
+expr(3.3,1.2,14.097,0.635,p)
+expr(3.3,1.2,16.129,0.635,p)
+expr(3.3,1.2,18.161,0.635,p)
+expr(3.3,1.2,20.066,0.635,p)
 
-// draw it
-drawLines(bt.cut(t.lines(),p.lines()));
+expr(3.3,1.2,6.096,16.637,p)
+expr(3.3,1.2,10.161,16.637,p)
+expr(3.3,1.2,8.128,16.637,p)
+expr(3.3,1.2,12.065,16.637,p)
+expr(3.3,1.2,14.097,16.638,p)
+expr(3.3,1.2,16.129,16.637,p)
+expr(3.3,1.2,18.161,16.637,p)
+expr(3.3,1.2,20.066,16.637,p)
+
+let sc = bt.cut(t.lines(),p.lines())
+const xyz = bt.merge(sc,p.lines())
+drawLines(xyz);
