@@ -49,38 +49,38 @@ function pad(r,x,y){
    
   }
 
-function rrect(h, w, x, y) {
-  t.jump([x,y])
+function rrect(ch, cw, cx, cy) {
+  t.jump([cx - w/2,cy - h/2 - w/2])
   t.setAngle(0)
-  for (let i = 0; (i < h / 0.2); i++) {
-  t.forward(w)
+  for (let i = 0; (i < ch - w / 0.2); i++) {
+  t.forward(cw)
   t.left(90)
   t.forward(0.1)
   t.left(90)
-  t.forward(w)
+  t.forward(cw)
   t.right(90)
   t.forward(0.1)
   t.right(90)
 }
-  t.jump([x,y])
+  t.jump([cx - w/2,cy - h/2 - w/2])
   t.setAngle(90)
-  for (let i = 0; (i < w / 0.2); i++) {
+  for (let i = 0; (i < cw / 0.2); i++) {
   
-  t.forward(h)
+  t.forward(ch-w)
   t.right(90)
   t.forward(0.1)
   t.right(90)
-  t.forward(h)
+  t.forward(ch-w)
   t.left(90)
   t.forward(0.1)
   t.left(90)
 }
   r.setAngle(0)
-  r.jump([x + (w/2) ,y + h - w/2])
-  r.arc(360, w/2)
-  r.jump([x + (w/2),y+h - w/2 + 0.1])
+  r.jump([x + (cw/2) ,cy + ch - cw - cw/2])
+  r.arc(360, cw/2)
+  r.jump([x + (cw/2),cy+h - h/2 - cw/2 - cw/2 + 0.1])
   r.arc(360, w/2- 0.1)
-  r.jump([x + (w/2),y+h - w/2 + 0.2])
+  r.jump([x + (cw/2),y+h - w/2 + 0.2])
   r.arc(360, w/2- 0.2)
   r.jump([x + (w/2),y+h - w/2 + 0.4])
   r.arc(360, w/2- 0.4)
