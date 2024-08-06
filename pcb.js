@@ -50,64 +50,73 @@ function pad(r,x,y){
   }
 
 function rrect(ch, cw, cx, cy) {
-  t.jump([cx - w/2,cy - h/2 - w/2])
-  t.setAngle(0)
-  for (let i = 0; (i < ch - w / 0.2); i++) {
-  t.forward(cw)
-  t.left(90)
-  t.forward(0.1)
-  t.left(90)
-  t.forward(cw)
-  t.right(90)
-  t.forward(0.1)
-  t.right(90)
+  r.jump([cx - cw/2,cy - ch/2 - cw/2])
+  r.setAngle(0)
+  for (let i = 0; (i < ((ch -cw) / 0.2)); i++) {
+  r.forward(cw+0)
+  r.left(90)
+  r.forward(0.1)
+  r.left(90)
+  r.forward(cw)
+  r.right(90)
+  r.forward(0.1)
+  r.right(90)
 }
-  t.jump([cx - w/2,cy - h/2 - w/2])
+  t.jump([cx -cw/2,cy - ch/2 - cw/2])
   t.setAngle(90)
   for (let i = 0; (i < cw / 0.2); i++) {
   
-  t.forward(ch-w)
+  t.forward(ch - cw)
   t.right(90)
   t.forward(0.1)
   t.right(90)
-  t.forward(ch-w)
+  t.forward(ch - cw)
   t.left(90)
   t.forward(0.1)
   t.left(90)
 }
   r.setAngle(0)
-  r.jump([x + (cw/2) ,cy + ch - cw - cw/2])
+  r.jump([cx  ,cy + ch/2 - cw - cw/2 - cw/2])
   r.arc(360, cw/2)
-  r.jump([x + (cw/2),cy+h - h/2 - cw/2 - cw/2 + 0.1])
-  r.arc(360, w/2- 0.1)
-  r.jump([x + (cw/2),y+h - w/2 + 0.2])
-  r.arc(360, w/2- 0.2)
-  r.jump([x + (w/2),y+h - w/2 + 0.4])
-  r.arc(360, w/2- 0.4)
+  r.jump([cx,cy + ch/2 - cw - cw/2 - cw/2 + 0.1])
+  r.arc(360, cw/2- 0.1)
+  r.jump([cx,cy + ch/2 - cw - cw/2  - cw/2+ 0.2])
+  r.arc(360, cw/2- 0.2)
+  r.jump([cx,cy + ch/2 - cw - cw/2  - cw/2+ 0.4])
+  r.arc(360, cw/2- 0.4)
 
   r.setAngle(0)
-  r.jump([x + (w/2) ,y - w/2])
-  r.arc(360, w/2)
-  r.jump([x + (w/2),y - w/2 + 0.1])
-  r.arc(360, w/2- 0.1)
-  r.jump([x + (w/2),y - w/2 + 0.2])
-  r.arc(360, w/2- 0.2)
-  r.jump([x + (w/2),y - w/2 + 0.4])
-  r.arc(360, w/2- 0.4)
+  r.jump([cx ,cy- ch/2 - cw/2 - cw/2])
+  r.arc(360, cw/2)
+  r.jump([cx ,cy- ch/2 - cw/2 - cw/2 + 0.1])
+  r.arc(360, cw/2- 0.1)
+  r.jump([cx ,cy- ch/2 - cw/2 - cw/2 + 0.2])
+  r.arc(360, cw/2- 0.2)
+  r.jump([cx ,cy- ch/2 - cw/2 - cw/2 + 0.4])
+  r.arc(360, cw/2- 0.4)
 }
 function trace(x1,y1,x2,y2) {
   let tr = [
-    [x1-0.0,y1-0.0],
-    [x2-0.0,y2-0.0]
+    [x1-0.0,y1-0.5],
+    [x2-0.0,y2-0.5]
   ]
 p.push(tr)
  let tr1 = [
-   [x2 + 0.0,y2+0.0],
-    [x1 + 0.0,y1+0.0]
+   [x2 + 0.0,y2+-0.5],
+    [x1 + 0.0,y1+-0.5]
     ]
   p.push(tr1)
 }
-rrect(4,1,13,6)
+rrect(2.25,0.63,24.399,4.816)
+rrect(2.25,0.63,25.669,4.816)
+rrect(2.25,0.63,26.939,4.816)
+rrect(2.25,0.63,28.209,4.816)
+
+rrect(2.25,0.63,24.399,11.877)
+rrect(2.25,0.63,25.669,11.877)
+rrect(2.25,0.63,26.939,11.877)
+rrect(2.25,0.63,28.209,11.877)
+
 trace(6.731,18.252,6.731,16.129)
 trace(6.731,16.129,8.731,14.129)
 trace(8.731,14.129,8.731,5.071)
